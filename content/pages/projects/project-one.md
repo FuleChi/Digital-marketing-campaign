@@ -21,22 +21,17 @@ featuredImage:
   elementId: >-
     https://res.cloudinary.com/fulechib/image/upload/t_Thumbnail/v1722447263/Purple_Gradient_Marketing_Analytics_Carousel_Instagram_Post_1_djishs.png
 ---
-# Description
+### Description
 
 Ce travail a été réalisé avec une base de données d'une compagnie qui effectue des campagnes en ligne sur son site internet afin d'augmenter la visite de ce site, dans le but de favoriser les achats aussi bien en ligne qu'en magasin.
 
-
-Les données captent les réactions de la clientèle face aux cinq campagnes publicitaires en ligne couvrant la période de juillet 2012 à juin 2014. 
-
+Les données captent les réactions de la clientèle face aux cinq campagnes publicitaires en ligne couvrant la période de juillet 2012 à juin 2014.
 
 Leur taux de succès est mesuré par le nombre de visites du site web, le nombre d'achats par campagne et la rapidité avec laquelle l'achat a été effectué après la lecture de la publicité. Il s'agit de la vente de six grandes catégories de produits, y compris de l'or, des sucreries, du poisson, de la viande, des fruits et du vin.
 
-
 Les caractéristiques socio-économiques de la clientèle sont captées par leur année de naissance, niveau d'éducation, statut marital, revenu familial, et le nombre d'enfants et d'adolescents à la maison. Les clients proviennent de sept pays dont l'Allemagne, l'Espagne, le Canada, l'Afrique du Sud, les USA, l'Australie et l'Inde.
 
-
-
-# Structure des données
+### Structure des données
 
 *   Nombre de colonnes : 28
 
@@ -77,6 +72,6 @@ Les caractéristiques socio-économiques de la clientèle sont captées par leur
 | Complain            | 1 if customer complained in the last 2 years                       | bit                  | bit                  |
 | Country             | Customer's country                                                 | nvarchar(50)         | nvarchar(50)         |
 
-# Source des données
+### Source des données
 
 Kaggle: <https://www.kaggle.com/datasets/sahilnbajaj/marketing-campaigns-data-set>
