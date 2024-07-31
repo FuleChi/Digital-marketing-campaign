@@ -3,7 +3,7 @@ go
 
 SELECT * FROM marketing_data;
 
---------------------PARTIE I. MANIPULATION DES DONNÉES--------------------------------------
+--------------------PARTIE I. MANIPULATION DES DONNÃ‰ES--------------------------------------
 
 begin tran T1
 
@@ -21,28 +21,28 @@ COMMIT;
 
 
 --Convertir le data type de INCOME de 'nvarchar' en 'int'
-	-- Étape 1 : Supprimer les caractères non numériques (virgules) et convertir les valeurs en format numérique
+	-- Ã‰tape 1 : Supprimer les caractÃ¨res non numÃ©riques (virgules) et convertir les valeurs en format numÃ©rique
 
 	UPDATE marketing_data
 	SET income = REPLACE(income, ',', '');
 
-	-- Supprimer le '.' sur les enregistrements (16 au total) qui contiennent le point comme dernier caractère
+	-- Supprimer le '.' sur les enregistrements (16 au total) qui contiennent le point comme dernier caractÃ¨re
 	UPDATE marketing_data
 	set Income = rtrim(Income, '.')
 	where Income LIKE '%.%';
 
-	-- Étape 2 : Convertir temporairement les valeurs de la colonne Income en entiers dans une nouvelle colonne
+	-- Ã‰tape 2 : Convertir temporairement les valeurs de la colonne Income en entiers dans une nouvelle colonne
 	ALTER TABLE marketing_data
 	ADD income_temp INT;
  
 	UPDATE marketing_data
 	SET income_temp = CAST(income AS INT);
  
-	-- Étape 3 : Supprimer la colonne originale Income
+	-- Ã‰tape 3 : Supprimer la colonne originale Income
 	ALTER TABLE marketing_data
 	DROP COLUMN income;
  
-	-- Étape 4 : Renommer la colonne temporaire en Income
+	-- Ã‰tape 4 : Renommer la colonne temporaire en Income
 	EXEC sp_rename 'marketing_data.income_temp', 'Income', 'COLUMN';
 
 --Uniformiser la casse des valeurs de "Education"
@@ -52,30 +52,30 @@ SET Education = UPPER(Education);
 
 
 
---------------------PARTIE II. REQUÊTES DES DONNÉES--------------------------------------
+--------------------PARTIE II. REQUÃŠTES DES DONNÃ‰ES--------------------------------------
 
--- R1. Nombre total de clients par pays dans l'ordre décroissant
+-- R1. Nombre total de clients par pays dans l'ordre dÃ©croissant
 SELECT Country, COUNT(*) AS NombreClients
 FROM marketing_data
 GROUP BY Country
 ORDER BY NombreClients DESC;
 
 
--- R2.Quels sont les 5 status maritals ayant le revenu le plus élevé 
+-- R2.Quels sont les 5 status maritals ayant le revenu le plus Ã©levÃ© 
 SELECT TOP 5 Marital_Status, SUM(Income) AS RevenuTotal
 FROM marketing_data
 GROUP BY Marital_Status
 ORDER BY RevenuTotal DESC;
 
 
--- R3. La liste des clients dont les revenus sont supérieurs à la moyenne des revenus de l'échantillon d'analyse
+-- R3. La liste des clients dont les revenus sont supÃ©rieurs Ã  la moyenne des revenus de l'Ã©chantillon d'analyse
 SELECT id, Year_Birth, Education, Income FROM marketing_data 
 	WHERE Income >(
 	SELECT AVG(Income) MoyIncome
 	FROM marketing_data );
  
 
--- R4. La liste des client qui ont déjà fait au moins 1 achat sur le site web de la compagnie
+-- R4. La liste des client qui ont dÃ©jÃ  fait au moins 1 achat sur le site web de la compagnie
  SELECT distinct ID, NumWebPurchases
  FROM marketing_data
  WHERE NumWebPurchases > 0 ;
@@ -89,7 +89,7 @@ GROUP BY (Kidhome + Teenhome)
 ORDER BY MontantTotalAchats DESC;
 
 
---R6. La liste des clients mariés qui sont client depuis au moins 10 ans, au 31 décembre 2023
+--R6. La liste des clients mariÃ©s qui sont client depuis au moins 10 ans, au 31 dÃ©cembre 2023
 SELECT Id, Dt_Customer
 FROM marketing_data
 WHERE Marital_Status = 'Married'
@@ -110,7 +110,7 @@ GROUP BY NumWebVisitsMonth
 ORDER BY NumWebVisitsMonth DESC;
 
 
---R9. Le taux de réponse positif aux campagnes de marketing
+--R9. Le taux de rÃ©ponse positif aux campagnes de marketing
 SELECT SUM(
         CASE WHEN AcceptedCmp1 = 1 THEN 1 ELSE 0 END + 
         CASE WHEN AcceptedCmp2 = 1 THEN 1 ELSE 0 END + 
@@ -122,7 +122,7 @@ FROM marketing_data;
 
 
 /* R10. Statistiques de toutes les campagnes de marketing (
-		'Succès' si le client a acheté pendant la campagne en question et
+		'SuccÃ¨s' si le client a achetÃ© pendant la campagne en question et
 		'Echec' si le client n'a pas fait d'achat pendant la campagne en question)*/
 SELECT
     'Success' AS Type,
@@ -143,7 +143,7 @@ SELECT
 FROM marketing_data;
 
 
--- R11. Le nombre de plaintes effectué par pays
+-- R11. Le nombre de plaintes effectuÃ© par pays
 SELECT Country, COUNT(*) AS NombrePlaintes
 FROM marketing_data
 WHERE Complain = 1
@@ -169,7 +169,7 @@ GROUP BY Dt_Customer
 ORDER BY qteVins DESC, qteFruits DESC, qteViande DESC, qtePoisson DESC, qteSucre DESC, qteOr DESC;
 
 
---R14. L'année à laquelle on a eu la plus grande vente en ligne
+--R14. L'annÃ©e Ã  laquelle on a eu la plus grande vente en ligne
 SELECT TOP 1 YEAR(Dt_Customer) AS Annee, MAX(NumWebPurchases) AS MaxVentesEnLigne
 FROM marketing_data
 GROUP BY YEAR(Dt_Customer)
@@ -194,13 +194,13 @@ SELECT
 FROM marketing_data;
 
 
---R17. Le montant depensé sur le vin pendant les 2 dernier années selon le niveau d'éducation des clients
+--R17. Le montant depensÃ© sur le vin pendant les 2 dernier annÃ©es selon le niveau d'Ã©ducation des clients
 SELECT Education, SUM(MntWines) AS depSurVins
 FROM marketing_data
 GROUP BY Education;
 
 
--- R18. Les caractéristiques socio-économiques des célibataires les plus âgés selon leur pays
+-- R18. Les caractÃ©ristiques socio-Ã©conomiques des cÃ©libataires les plus Ã¢gÃ©s selon leur pays
 SELECT 
     Country,
     COUNT(id) AS nbreClients,
@@ -213,13 +213,7 @@ WHERE Marital_Status = 'Single'
 GROUP BY Country, Education, (Kidhome + Teenhome);
 
 
---R19. Le montant depensé sur le vin pendant les 2 dernier années selon le niveau d'éducation des clients
-SELECT Education, COUNT(ID) AS nbreClients, SUM(MntWines) AS depSurVins
-FROM marketing_data
-GROUP BY Education;
-
-
--- R20. Les nombre de clients les plus jeunes, ainsi que leur âge et leur voie d'achat préférée
+-- R19. Les nombre de clients les plus jeunes, ainsi que leur Ã¢ge et leur voie d'achat prÃ©fÃ©rÃ©e
 SELECT TOP 1
     COUNT(id) AS nbreClients, 
     YEAR(GETDATE()) - Year_Birth AS Age, 
