@@ -23,7 +23,7 @@ featuredImage:
     https://res.cloudinary.com/fulechib/image/upload/t_Thumbnail/v1722447263/Purple_Gradient_Marketing_Analytics_Carousel_Instagram_Post_1_djishs.png
 bottomSections:
   - type: ContactSection
-    title: Contact Me
+    title: Leave a Comment
     text: I'm look forward to hearing from you.
     form:
       type: FormBlock
