@@ -46,7 +46,7 @@ bottomSections:
           isRequired: 'true'
         - type: TextareaFormControl
           name: message
-          label: Tell me about your project
+          label: 'Laissez votre commentaire '
           hideLabel: true
           placeholder: Tell me about your project
           width: full
