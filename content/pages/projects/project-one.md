@@ -46,7 +46,7 @@ bottomSections:
           isRequired: 'true'
         - type: EmailFormControl
           name: email-address
-          label: Name
+          label: Courriel
           hideLabel: false
           placeholder: Your name
           width: 1/2
