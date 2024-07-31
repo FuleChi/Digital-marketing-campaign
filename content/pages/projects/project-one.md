@@ -34,7 +34,7 @@ bottomSections:
           name: name
           label: Prénom
           hideLabel: true
-          placeholder: Your name
+          placeholder: Prénom
           width: 1/2
           isRequired: 'true'
         - type: EmailFormControl
