@@ -5,9 +5,8 @@ colors: colors-a
 date: '2024-07-31'
 client: Anonymous
 description: >-
-  It’s hard to imagine that I’ve that I wrote all this code by myself, probably
-  because I worked with an entire team :) but they definitely followed my lead
-  most of the time.
+  Interesting insights into marketing performance from digital ads campaigns and
+  other traditional marketing channels (presented in French).
 media:
   type: ImageBlock
   url: >-
