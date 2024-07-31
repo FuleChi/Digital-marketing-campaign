@@ -34,7 +34,8 @@ sections:
 
     media:
       type: ImageBlock
-      url: /images/about.jpg
+      url: >-
+        http://res.cloudinary.com/fulechib/image/upload/v1722436917/WhatsApp_Image_2024-03-30_at_17.24.21_3562c5f7_tk7qh6.jpg
       altText: Fule
     styles:
       self:
