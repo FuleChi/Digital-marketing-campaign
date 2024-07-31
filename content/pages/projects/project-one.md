@@ -5,8 +5,8 @@ colors: colors-a
 date: '2024-07-31'
 client: Anonymous
 description: >-
-  Interesting insights into marketing performance from digital ads campaigns and
-  other traditional marketing channels (presented in French).
+  Interesting insights into the marketing performance of digital ads campaigns
+  and other traditional marketing channels (presented in French).
 media:
   type: ImageBlock
   url: >-
