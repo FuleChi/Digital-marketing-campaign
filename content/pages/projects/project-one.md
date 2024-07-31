@@ -32,7 +32,7 @@ bottomSections:
       fields:
         - type: TextFormControl
           name: name
-          label: Name
+          label: Prénom
           hideLabel: true
           placeholder: Your name
           width: 1/2
