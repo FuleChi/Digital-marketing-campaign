@@ -5,8 +5,8 @@ colors: colors-a
 date: '2024-07-31'
 client: Anonymous
 description: >-
-  Interesting insights into the marketing performance of digital ads campaigns
-  and other traditional marketing channels (presented in French).
+  Major challenge : Analyzing binary data in Microsoft SQL server (presented in
+  French).
 media:
   type: ImageBlock
   url: >-
