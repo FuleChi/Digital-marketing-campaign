@@ -48,7 +48,7 @@ bottomSections:
           name: message
           label: 'Laissez votre commentaire '
           hideLabel: true
-          placeholder: Tell me about your project
+          placeholder: 'Laissez votre commentaire '
           width: full
           isRequired: true
         - type: CheckboxFormControl
