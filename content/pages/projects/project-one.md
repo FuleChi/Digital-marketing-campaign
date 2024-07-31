@@ -24,7 +24,8 @@ featuredImage:
 bottomSections:
   - type: ContactSection
     title: Leave a Comment
-    text: I'm look forward to hearing from you.
+    text: |
+      Qu'en pensez-vous de cette analyse?
     form:
       type: FormBlock
       title: Title of the form
