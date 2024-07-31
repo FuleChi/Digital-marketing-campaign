@@ -1,10 +1,10 @@
 {
     "type": "Person",
-    "firstName": "Doris",
-    "lastName": "Soto",
+    "firstName": "Fule",
+    "lastName": "Chi B.",
     "image": {
         "type": "ImageBlock",
-        "url": "/images/about.jpg",
-        "altText": "Doris Soto photo"
+        "url": "http://res.cloudinary.com/fulechib/image/upload/v1722436863/WhatsApp_Image_2024-01-07_%C3%A0_22.07.10_a815890e_yvyiwv.jpg",
+        "altText": "Fule photo"
     }
 }
