@@ -48,7 +48,7 @@ bottomSections:
           name: email-address
           label: Courriel
           hideLabel: false
-          placeholder: Your name
+          placeholder: Courriel
           width: 1/2
           isRequired: false
         - type: TextareaFormControl
