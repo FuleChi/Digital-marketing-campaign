@@ -47,7 +47,7 @@ bottomSections:
         - type: EmailFormControl
           name: email-address
           label: Courriel
-          hideLabel: false
+          hideLabel: true
           placeholder: Courriel
           width: 1/2
           isRequired: false
