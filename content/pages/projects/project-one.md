@@ -56,7 +56,7 @@ bottomSections:
           label: Inscrivez-moi pour recevoir des mises à jour
           width: full
           isRequired: 'false'
-      submitLabel: Send Message
+      submitLabel: Envoyer
       elementId: contact-form
       styles:
         submitLabel:
