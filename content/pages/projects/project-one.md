@@ -53,7 +53,7 @@ bottomSections:
           isRequired: false
         - type: TextFormControl
           name: name
-          label: Name
+          label: Pays de residence
           hideLabel: false
           placeholder: Your name
           width: 1/2
