@@ -77,8 +77,6 @@ Les caractéristiques socio-économiques de la clientèle sont captées par leur
 
 Kaggle: [https://www.kaggle.com/datasets/sahilnbajaj/marketing-campaigns-data-set](https://www.kaggle.com/datasets/sahilnbajaj/marketing-campaigns-data-setAnalyse)
 
-
-
 ### Analyse des données
 
 Afin d'obtenir des informations pertinentes pour affiner notre stratégie de marketing, j'ai procédé aux requêtes suivantes :
@@ -93,7 +91,7 @@ Afin d'obtenir des informations pertinentes pour affiner notre stratégie de mar
 
 5.  Relation entre le nombre d'enfants et adolescent àla maison et le montant des achats
 
-6.  La liste des clients mariés qui sont clients depuis au moins 10 ans, au 31 décembre 2023
+6.  Le nombre de clients mariés et leur ancieneté de statut  de client avec la compagnie, au 31 décembre 2023
 
 7.  Le nombre de clients depuis leur dernier achat
 
@@ -119,7 +117,7 @@ Afin d'obtenir des informations pertinentes pour affiner notre stratégie de mar
 
 18. Les caractéristiques socio-économiques des célibataires les plus âgés selon leur pays
 
-19. Le nombre de clients les plus jeunes, ainsi que leur âge et leur voie d'achat préférée
+19. Le nombre de clients par generation, ainsi que leur âge moyen et leur voie d'achat préférée
 
 Le code SQL de ces 19 requêtes se trouve [ICI](https://github.com/FuleChi/Digital-marketing-campaign/blob/main/TP1_requetes%20Marketing_data_final.sql).
 
@@ -127,15 +125,76 @@ Le code SQL de ces 19 requêtes se trouve [ICI](https://github.com/FuleChi/Digit
 
 ### Resultat de l'Analyse
 
-La majorité des clients proviennent de l'Espagne, contribuant soit 49% des ventes totales.
+La majorité des clients proviennent d'Espagne, contribuant ainsi à 49 % des ventes totales. Les clients ayant le statut de 'Absurd' ont le revenu moyen le plus élevé. Attention : ceux-ci ne représentent que 0,1 % de la population. Il serait donc sage de prêter attention plutôt aux mariés, qui constituent 38,6 % de la clientèle.
 
-Les clients ayant le statut de 'Absurd' on le revenu moyen le plus elevé
+En termes de niveau d'éducation, les clients ayant un doctorat sont les plus nombreux, suivis par ceux ayant une maîtrise et ceux ayant un niveau collégial en troisième position. Il est néanmoins important de souligner que les clients ayant au moins un niveau collégial constituent la majorité de la clientèle.
 
-Caution: Ceux-ci ne representent que 0,1% de la pouplation. Alors, il serai sage de prêter attention plutôt aux mariés qui contiuent 38,6% de la population de la clientèle.
+La majorité des clients ont un enfant/adolescent à la maison ; cependant, les clients qui n'ont ni enfant ni adolescent à la maison sont responsables de la grande majorité des achats effectués.
 
-En terme de niveau d'éducation, les clients ayant un Doctorat sont les plus afflux, suivi par ceux avec la Maitrise et ceux ayant le niveau collegial en troisieme position. Il est quand-même important de souligner que le nombre de clients avec au moins un niveau collegial est la majorité de la clientele.
+Les campagnes publicitaires en ligne, toutes campagnes confondues, ont eu un taux de succès de 30 %, avec la campagne No. 4 ayant le plus grand succès à 7,4 % et la campagne No. 2 ayant le moindre succès à 1,3 %.
 
-La majorité des clients ont 1 enfant/adolescent à la maison, cependant,  les clients qui ont ni enfant, ni adolescent à la maison sont responsable de la grande majorité d'achat effectué.
+Le vin est le produit le plus demandé, avec la plus grande vente effectuée le 22 mai 2013.
+
+La compagnie réalise 12 % de ses ventes en magasin de plus qu'en ligne. La vente par les catalogues et les offres promotionnelles est non négligeable, car elles contribuent à 33 % des ventes totales.
+
+Les Gen X constituent la majorité de la clientèle. Ils ont un âge moyen de 51 ans et préfèrent magasiner davantage en magasin.
+
+### 
+Points Forts du Projet
+
+1.  **Richesse des Données** :
+
+    *   La base de données est riche et diversifiée, contenant des informations détaillées sur les clients, y compris des données démographiques et des comportements d'achat.
+
+    *   Les données couvrent plusieurs pays, ce qui permet des analyses comparatives intéressantes entre les différentes régions.
+
+2.  **Analyse Complète des Campagnes** :
+
+    *   Les données permettent de mesurer le taux de succès des campagnes publicitaires de manière détaillée, y compris le nombre de visites et d'achats, et la rapidité des achats post-publicité.
+
+    *   Les campagnes sont analysées sur une période de deux ans, ce qui permet de discerner des tendances et des évolutions dans les comportements d'achat.
+
+3.  **Segmentation Socio-Économique** :
+
+    *   La segmentation des clients par statut marital, niveau d'éducation, et revenu familial offre des insights précieux pour adapter les stratégies marketing aux différents segments de la clientèle.
+
+4.  **Multicanal** :
+
+    *   Les données incluent différents types de canaux d'achat (en ligne, en magasin, via catalogue), permettant d'analyser la performance de chaque canal et de comprendre les préférences des clients.
+
+
+
+### Faiblesses du Projet
+
+1.  **Données Anciennes** :
+
+    *   Les données couvrent une période de juillet 2012 à juin 2014. Elles peuvent ne plus refléter les comportements actuels des consommateurs ou les tendances du marché.
+
+2.  **Manque de Données Qualitatives** :
+
+    *   Les données sont principalement quantitatives. Des informations qualitatives sur la satisfaction des clients ou leurs motivations d'achat pourraient enrichir l'analyse.
+
+3.  **Représentation Inégale des Catégories de Produits** :
+
+    *   Les six catégories de produits analysées peuvent ne pas couvrir l'ensemble de l'offre de la compagnie, limitant ainsi la portée des conclusions.
+
+4.  **Problèmes de Segmentation** :
+
+    *   La segmentation par statut marital inclut une catégorie "Absurd" avec un revenu moyen élevé mais ne représentant que 0,1 % de la population, ce qui pourrait biaiser les analyses.
+
+5.  **Données Sur Les Réclamations** :
+
+    *   Bien que le nombre de plaintes soit collecté, il n'y a pas d'analyse approfondie des raisons des plaintes ou de la satisfaction globale des clients, ce qui est crucial pour l'amélioration continue des services. 
+
+**6. Analyse des données:**
+
+Cette analyse se limite aux statistiques descriptives du donnée. Une ètude plus approfondi utilisant les regressions par exemple, pourrais faire resortir la dependance entre les variables et leurs niveaux de correlation.
+
+
+
+### Conclusion
+
+Le projet présente une base solide pour l'analyse des campagnes marketing avec des données détaillées et diversifiées. Toutefois, des mises à jour des données, une inclusion de données qualitatives et une analyse plus approfondie des réclamations des clients pourraient améliorer la pertinence et la profondeur des insights obtenus.
 
 
 
