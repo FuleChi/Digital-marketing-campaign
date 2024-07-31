@@ -74,4 +74,71 @@ Les caractéristiques socio-économiques de la clientèle sont captées par leur
 
 ### Source des données
 
-Kaggle: <https://www.kaggle.com/datasets/sahilnbajaj/marketing-campaigns-data-set>
+Kaggle: [https://www.kaggle.com/datasets/sahilnbajaj/marketing-campaigns-data-set](https://www.kaggle.com/datasets/sahilnbajaj/marketing-campaigns-data-setAnalyse)
+
+
+
+### Analyse des données
+
+Afin d'obtenir des informations pertinentes pour affiner notre stratégie de marketing, j'ai procédé aux requêtes suivantes :
+
+1.  Nombre total de clients par pays dans l'ordre décroissant
+
+2.  Quel status maritals a le revenu moyen le plus élevé?
+
+3.  Le niveau d'education et le nombre des clients  dont les revenus sont supérieurs à la moyenne des revenus de l'échantillon d'analyse
+
+4.  La liste des clients qui ont déjà fait au moins un achat sur le site web de la compagnie
+
+5.  Relation entre le nombre d'enfants et adolescent àla maison et le montant des achats
+
+6.  La liste des clients mariés qui sont clients depuis au moins 10 ans, au 31 décembre 2023
+
+7.  Le nombre de clients depuis leur dernier achat
+
+8.  Le nombre de visites web par mois
+
+9.  Le taux de réponse positif aux campagnes de marketing
+
+10. Statistiques de toutes les campagnes de marketing ('Succès' si le client a acheté pendant la campagne en question et 'Échec' si le client n'a pas fait d'achat pendant la campagne en question)
+
+11. Le nombre de plaintes effectuées par pays
+
+12. Quelle est la moyenne des achats par type de produit ?
+
+13. Le produit le plus vendu et la date de la vente
+
+14. L'année à laquelle on a eu la plus grande vente en ligne
+
+15. Le nombre total des ventes provenant de tous les circuits de vente
+
+16. Le pourcentage des ventes selon le type de circuit de vente
+
+17. Le montant dépensé sur le vin pendant les deux dernières années selon le niveau d'éducation des clients
+
+18. Les caractéristiques socio-économiques des célibataires les plus âgés selon leur pays
+
+19. Le nombre de clients les plus jeunes, ainsi que leur âge et leur voie d'achat préférée
+
+Le code SQL de ces 19 requêtes se trouve [ICI](https://github.com/FuleChi/Digital-marketing-campaign/blob/main/TP1_requetes%20Marketing_data_final.sql).
+
+
+
+### Resultat de l'Analyse
+
+La majorité des clients proviennent de l'Espagne, contribuant soit 49% des ventes totales.
+
+Les clients ayant le statut de 'Absurd' on le revenu moyen le plus elevé
+
+Caution: Ceux-ci ne representent que 0,1% de la pouplation. Alors, il serai sage de prêter attention plutôt aux mariés qui contiuent 38,6% de la population de la clientèle.
+
+En terme de niveau d'éducation, les clients ayant un Doctorat sont les plus afflux, suivi par ceux avec la Maitrise et ceux ayant le niveau collegial en troisieme position. Il est quand-même important de souligner que le nombre de clients avec au moins un niveau collegial est la majorité de la clientele.
+
+La majorité des clients ont 1 enfant/adolescent à la maison, cependant,  les clients qui ont ni enfant, ni adolescent à la maison sont responsable de la grande majorité d'achat effectué.
+
+
+
+
+
+
+
