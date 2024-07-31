@@ -3,7 +3,7 @@ type: ProjectLayout
 title: Digital Marketing Campaign Project
 colors: colors-a
 date: '2024-07-31'
-client: Awesome client
+client: Anonymous
 description: >-
   It’s hard to imagine that I’ve that I wrote all this code by myself, probably
   because I worked with an entire team :) but they definitely followed my lead
