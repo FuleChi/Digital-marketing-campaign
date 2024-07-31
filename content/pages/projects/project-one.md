@@ -28,7 +28,7 @@ bottomSections:
       Qu'en pensez-vous de cette analyse?
     form:
       type: FormBlock
-      title: Title of the form
+      title: Commentaires
       fields:
         - type: TextFormControl
           name: name
