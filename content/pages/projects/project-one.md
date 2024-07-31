@@ -51,11 +51,6 @@ bottomSections:
           placeholder: Your name
           width: 1/2
           isRequired: false
-        - type: CheckboxFormControl
-          name: updates
-          label: Inscrivez-moi pour recevoir des mises à jour
-          width: full
-          isRequired: 'false'
         - type: TextareaFormControl
           name: message
           label: 'Laissez votre commentaire '
@@ -63,6 +58,11 @@ bottomSections:
           placeholder: 'Laissez votre commentaire '
           width: full
           isRequired: true
+        - type: CheckboxFormControl
+          name: updates
+          label: Inscrivez-moi pour recevoir des mises à jour
+          width: full
+          isRequired: 'false'
       submitLabel: Envoyer
       elementId: contact-form
       styles:
