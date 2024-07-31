@@ -13,15 +13,30 @@ sections:
   - elementId: ''
     colors: colors-f
     backgroundSize: full
-    text: >-
-      ## Hey I’m a developer. I’ve been born and raised in the world, and that’s
-      also where I’m based. I’m currently a free agent, ex-this, ex-that,
-      ex-super big name. When I’m not coding, writing or creating, I eat
-      cereals. I have a dog, check her out [@mygod](https://www.stackbit.com/).
+    text: >+
+      ## Some Fun Facts About Fule!
+
+
+      When I'm not workig on a project, I am reading, listening to gospel music
+      or dancing. 
+
+
+      My 4 most important values are Family, Spirituality, Personal Development
+      and Wealth Creation. 
+
+
+      According to Roger James Hamilton's Wealth dynamics system, I belong to
+      the MECHANIC wealth profile. Like Mark Zuckerberg and Jeff Bezos, 
+      Mechanics are the best at completing things. We are high on Steel and
+      Dynamo energy. As perfectionists we sometimes seem to take longer to get
+      things done. Our flow comes from simplifying complex solutions into
+      predicatable systems.
+
     media:
       type: ImageBlock
-      url: /images/about.jpg
-      altText: Hero image
+      url: >-
+        http://res.cloudinary.com/fulechib/image/upload/v1722436917/WhatsApp_Image_2024-03-30_at_17.24.21_3562c5f7_tk7qh6.jpg
+      altText: Fule
     styles:
       self:
         height: auto
