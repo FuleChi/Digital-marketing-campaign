@@ -41,7 +41,7 @@ bottomSections:
           name: email
           label: Nom
           hideLabel: true
-          placeholder: Your email
+          placeholder: Nom
           width: 1/2
           isRequired: 'true'
         - type: TextareaFormControl
