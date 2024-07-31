@@ -10,7 +10,8 @@ description: >-
   most of the time.
 media:
   type: ImageBlock
-  url: /images/bg1.jpg
+  url: >-
+    http://res.cloudinary.com/fulechib/image/upload/v1722447263/Purple_Gradient_Marketing_Analytics_Carousel_Instagram_Post_1_djishs.png
   altText: Project image
 featuredImage:
   type: ImageBlock
