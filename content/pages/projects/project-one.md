@@ -21,15 +21,84 @@ featuredImage:
   elementId: >-
     https://res.cloudinary.com/fulechib/image/upload/t_Thumbnail/v1722447263/Purple_Gradient_Marketing_Analytics_Carousel_Instagram_Post_1_djishs.png
 ---
+# Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. Curabitur at auctor sapien. Etiam at cursus enim. Suspendisse sed augue tortor. Nunc eu magna vitae lorem pellentesque fermentum. Sed in facilisis dui. Nulla molestie risus in mi dapibus, eget porta lorem semper. Donec sed facilisis nibh. Curabitur eget dui in libero euismod commodo nec sit amet est. Etiam id ipsum aliquam, vehicula erat sit amet, consequat tortor.
+Ce travail a été réalisé avec une base de données d'une compagnie qui effectue des campagnes en ligne sur leur site internet afin de booster la visite de leur site, dans le but de favoriser les achats aussi bien en ligne qu’en magasin. 
 
-Etiam facilisis lacus nec pretium lobortis. Praesent dapibus justo non efficitur efficitur. Nullam viverra justo arcu, eget egestas tortor pretium id. Sed imperdiet mattis eleifend. Vivamus suscipit et neque imperdiet venenatis. In malesuada sed urna eget vehicula. Donec fermentum tortor sit amet nisl elementum fringilla. Pellentesque dapibus suscipit faucibus. Nullam malesuada sed urna quis rutrum. Donec facilisis lorem id maximus mattis. Vestibulum quis elit magna. Vestibulum accumsan blandit consequat. Phasellus quis posuere quam.
+Cette analyse des statistiques des réactions de la clientèle en lien avec les différentes campagnes  porte sur l’enregistrement du nombre d’achats par campagne et ceci par profil du client.
 
-> “Everybody should learn to program a computer, because it teaches you how to think.”
 
-Vestibulum ullamcorper risus auctor eleifend consequat. Vivamus mollis in tellus ac ullamcorper. Vestibulum sit amet bibendum ipsum, vitae rutrum ex. Nullam cursus, urna et dapibus aliquam, urna leo euismod metus, eu luctus justo mi eget mauris. Proin felis leo, volutpat et purus in, lacinia luctus eros. Pellentesque lobortis massa scelerisque lorem ullamcorper, sit amet elementum nulla scelerisque. In volutpat efficitur nulla, aliquam ornare lectus ultricies ac. Mauris sagittis ornare dictum. Nulla vel felis ut purus fermentum pretium. Sed id lectus ac diam aliquet venenatis. Etiam ac auctor enim. Nunc velit mauris, viverra vel orci ut, egestas rhoncus diam. Morbi scelerisque nibh tellus, vel varius urna malesuada sed. Etiam ultricies sem consequat, posuere urna non, maximus ex. Mauris gravida diam sed augue condimentum pulvinar vel ac dui. Integer vel convallis justo.
 
-Nam rutrum magna sed pellentesque lobortis. Etiam quam mauris, iaculis eget ex ac, rutrum scelerisque nisl. Cras finibus dictum ex sed tincidunt. Morbi facilisis neque porta, blandit mauris quis, pharetra odio. Aliquam dictum quam quis elit auctor, at vestibulum ex pulvinar. Quisque lobortis a lectus quis faucibus. Nulla vitae pellentesque nibh, et fringilla erat. Praesent placerat ac est at tincidunt. Praesent ultricies a ex at ultrices. Etiam sed tincidunt elit. Nulla sagittis neque neque, ultrices dignissim sapien pellentesque faucibus. Donec tempor orci sed consectetur dictum. Ut viverra ut enim ac semper. Integer lacinia sem in arcu tempor faucibus eget non urna. Praesent vel nunc eu libero aliquet interdum non vitae elit. Maecenas pharetra ipsum dolor, et iaculis elit ornare ac.
+# Profilage des données
 
-Aenean scelerisque ullamcorper est aliquet blandit. Donec ac tellus enim. Vivamus quis leo mattis, varius arcu at, convallis diam. Donec ac leo at nunc viverra molestie ac viverra nisi. Proin interdum at turpis at varius. Nunc sit amet ex suscipit, convallis ligula eu, pretium turpis. Sed ultricies neque vel mi malesuada, et mollis risus lobortis. Sed condimentum venenatis mauris, id elementum dolor gravida ac. Sed sodales tempus neque, quis iaculis arcu tincidunt ut. Donec vitae faucibus dui. In hac habitasse platea dictumst. Donec erat ex, ullamcorper a massa a, porttitor porta ligula.
+*   Nombre de colonnes : 28
+
+*   Nombre de lignes : 2240
+
+*   Types de données :
+
+              numéric (int64)       : 22 colonnes
+
+              string (nvarchar)       : 5 colonnes
+
+              date :      1 colonne
+
+
+
+##### **Table 1. Noms des variables et types de données** 
+
+| Nom de colonne      | Description                                                        | Type de donnée avant  | Data de donnée après |
+| ------------------- | ------------------------------------------------------------------ | --------------------- | -------------------- |
+| ID                  | Unique identifier for each customer                                | smallint              | smallint             |
+| Year\_Birth         | Year of birth of the customer                                      | smallint              | smallint             |
+| Education           | Customer's level of education                                      | nvarchar(50)          | nvarchar(50)         |
+| Marital\_Status     | Customer's marital status                                          | nvarchar(50)          | nvarchar(50)         |
+| Income              | Customer's yearly household income                                 | nvarchar(50)          | int                  |
+| Kidhome             | Number of small children in customer's household                   | tinyint               | tinyint              |
+| Teenhome            | Number of teenagers in customer's household                        | tinyint               | tinyint              |
+| Dt\_Customer        | Date of customer's enrollment with the company                     | date                  | date                 |
+| Recency             | Number of days since the last purchase                             | tinyint               | tinyint              |
+| MntWines            | Amount spent on wines in the last 2 years                          | smallint              | smallint             |
+| MntFruits           | Amount spent on fruits in the last 2 years                         | tinyint               | tinyint              |
+| MntMeatProducts     | Amount spent on meat products in the last 2 years                  | smallint              | smallint             |
+| MntFishProducts     | Amount spent on fish products in the last 2 years                  | smallint              | smallint             |
+| MntSweetProducts    | Amount spent on sweet products in the last 2 years                 | smallint              | smallint             |
+| MntGoldProds        | Amount spent on gold products in the last 2 years                  | smallint              | smallint             |
+| NumDealsPurchases   | Number of purchases made with discount                             | tinyint               | tinyint              |
+| NumWebPurchases     | Number of purchases made through company's website                 | tinyint               | tinyint              |
+| NumCatalogPurchases | Number of purchases made using catalog                             | tinyint               | tinyint              |
+| NumStorePurchases   | Number of purchases made directly in stores                        | tinyint               | tinyint              |
+| NumWebVisitsMonth   | Number of visits to company's website in the last month            | tinyint               | tinyint              |
+| AcceptedCmp3        | 1 if customer accepted the offer in the 3rd campaign, 0 otherwise  | bit                   | bit                  |
+| AcceptedCmp4        | 1 if customer accepted the offer in the 4th campaign, 0 otherwise  | bit                   | bit                  |
+| AcceptedCmp5        | 1 if customer accepted the offer in the 5th campaign, 0 otherwise  | bit                   | bit                  |
+| AcceptedCmp1        | 1 if customer accepted the offer in the 1st campaign, 0 otherwise  | bit                   | bit                  |
+| AcceptedCmp2        | 1 if customer accepted the offer in the 2nd campaign, 0 otherwise  | bit                   | bit                  |
+| Response            | 1 if customer accepted the offer in the last campaign, 0 otherwise | bit                   | bit                  |
+| Complain            | 1 if customer complained in the last 2 years                       | bit                   | bit                  |
+| Country             | Customer's country                                                 | nvarchar(50)          | nvarchar(50)         |
+
+
+
+
+
+
+
+
+
+# Source des données
+
+Kaggle: <https://www.kaggle.com/datasets/sahilnbajaj/marketing-campaigns-data-set>
+
+
+
+
+
+
+
+
+
+
+
+
+
