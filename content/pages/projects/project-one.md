@@ -6,7 +6,7 @@ date: '2024-07-31'
 client: Anonymous
 description: >-
   Major challenge : Analyzing binary data in Microsoft SQL server (presented in
-  French).
+  French). This is an my version of a project realized with  
 media:
   type: ImageBlock
   url: >-
