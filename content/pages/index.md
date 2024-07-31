@@ -14,12 +14,10 @@ sections:
     colors: colors-f
     backgroundSize: full
     title: >-
-      I’m a developer, digital artist, consultant and a bunch of other
-      impressive titles and buzz words.
-    subtitle: >-
-      This is my info—I’m sharing it all this with ya’ll to impress you with all
-      the hard work I’ve done in the past few years. Once you’re impressed, you
-      can continue to scroll down to see more details and credentials about me.
+      AS A MARKETING DATA ANALYST MY ROLE IS TO empower businesses with advanced
+      analytics and strategic insights FOR impactful marketing decisions and
+      sustainable growth.
+    subtitle: "ON THIS SITE, I ROLL THE BLINDS SO THAT YOU CAN SEE FISRTHAND PROJECTS THAT I HAVE\_ ACCOMPLISHED IN THE PAST AND MY RECOMMENDATIONS TO SMEs"
     styles:
       self:
         height: auto
@@ -60,9 +58,9 @@ sections:
     showReadMoreLink: true
     variant: variant-b
     projects:
+      - content/pages/projects/project-one.md
       - content/pages/projects/project-two.md
       - content/pages/projects/project-three.md
-      - content/pages/projects/project-one.md
     styles:
       self:
         height: auto
@@ -84,7 +82,7 @@ sections:
         textAlign: left
       actions:
         justifyContent: flex-end
-    subtitle: 'Projects'
+    subtitle: Projects
   - type: FeaturedPostsSection
     elementId: ''
     colors: colors-f
