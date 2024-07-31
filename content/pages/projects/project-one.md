@@ -55,7 +55,7 @@ bottomSections:
           name: name
           label: Pays de residence
           hideLabel: false
-          placeholder: Your name
+          placeholder: Pays de residence
           width: 1/2
           isRequired: false
         - type: TextareaFormControl
