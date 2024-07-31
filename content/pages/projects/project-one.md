@@ -63,6 +63,13 @@ bottomSections:
           label: Inscrivez-moi pour recevoir des mises à jour
           width: full
           isRequired: 'false'
+        - type: TextFormControl
+          name: name
+          label: Name
+          hideLabel: false
+          placeholder: Your name
+          width: 1/2
+          isRequired: false
       submitLabel: Envoyer
       elementId: contact-form
       styles:
