@@ -44,13 +44,6 @@ bottomSections:
           placeholder: Nom
           width: 1/2
           isRequired: 'true'
-        - type: TextareaFormControl
-          name: message
-          label: 'Laissez votre commentaire '
-          hideLabel: true
-          placeholder: 'Laissez votre commentaire '
-          width: full
-          isRequired: true
         - type: EmailFormControl
           name: email-address
           label: Name
@@ -63,6 +56,13 @@ bottomSections:
           label: Inscrivez-moi pour recevoir des mises à jour
           width: full
           isRequired: 'false'
+        - type: TextareaFormControl
+          name: message
+          label: 'Laissez votre commentaire '
+          hideLabel: true
+          placeholder: 'Laissez votre commentaire '
+          width: full
+          isRequired: true
       submitLabel: Envoyer
       elementId: contact-form
       styles:
