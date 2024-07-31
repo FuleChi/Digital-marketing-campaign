@@ -53,7 +53,7 @@ bottomSections:
           isRequired: true
         - type: CheckboxFormControl
           name: updates
-          label: Ajoutez moi à votre info lettre
+          label: Inscrivez-moi pour recevoir des mises à jour
           width: full
           isRequired: 'false'
       submitLabel: Send Message
