@@ -51,15 +51,15 @@
         "primaryLinks": [
             {
                 "type": "Link",
-                "label": "Info",
-                "url": "/info",
-                "altText": ""
+                "label": "LinkedIn",
+                "url": "https://www.linkedin.com/in/coachfule/",
+                "altText": "Linkedin"
             },
             {
                 "type": "Link",
                 "label": "Contact",
-                "url": "mailto:thisismyemail.@myemail.me",
-                "altText": ""
+                "url": "mailto:chifule@gmail.com",
+                "altText": "Email"
             },
             {
                 "type": "Link",
@@ -70,8 +70,8 @@
             {
                 "type": "Link",
                 "label": "GitHub",
-                "url": "https://github.com/netlify-templates",
-                "altText": "Netlify templates"
+                "url": "https://github.com/FuleChi",
+                "altText": "Github"
             }
         ],
         "contacts": {
@@ -88,7 +88,12 @@
         "styles": {
             "self": {
                 "width": "narrow",
-                "padding": ["pt-16", "pb-16", "pr-4", "pl-4"]
+                "padding": [
+                    "pt-16",
+                    "pb-16",
+                    "pr-4",
+                    "pl-4"
+                ]
             }
         }
     }
