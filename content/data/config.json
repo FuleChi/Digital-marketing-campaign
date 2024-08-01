@@ -1,6 +1,6 @@
 {
     "type": "Config",
-    "favicon": "/images/favicon.svg",
+    "favicon": "http://res.cloudinary.com/fulechib/image/upload/v1722436517/Untitled_design_9_bb2e1g.png",
     "header": {
         "type": "Header",
         "headerVariant": "variant-c",
