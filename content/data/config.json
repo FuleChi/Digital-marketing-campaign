@@ -77,7 +77,7 @@
         "contacts": {
             "type": "ContactBlock",
             "title": "Contact details",
-            "phoneNumber": "850-123-5021",
+            "phoneNumber": "+1(514)566-9675",
             "phoneAltText": "My phone number",
             "email": "chifule@yahoo.co.uk",
             "emailAltText": "My email",
