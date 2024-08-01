@@ -3,7 +3,7 @@ type: ProjectLayout
 title: Digital Marketing Campaign Project
 colors: colors-a
 date: '2024-07-31'
-client: Anonymous
+client: SQL Project
 description: >-
   Major challenge : Analyzing binary data in Microsoft SQL server (presented in
   French). This is my version of a project realized with  Ghislain Fepessi Kewou
