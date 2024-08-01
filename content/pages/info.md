@@ -13,16 +13,16 @@ sections:
   - elementId: ''
     colors: colors-f
     backgroundSize: full
-    text: >+
-      ## Some Fun Facts About Fule!
+    text: >
+      ## Fun Facts About Fule!
 
 
       When I'm not workig on a project, I am reading, listening to gospel music
-      or dancing. 
+      or dancing.
 
 
       My 4 most important values are Family, Spirituality, Personal Development
-      and Wealth Creation. 
+      and Wealth Creation.
 
 
       According to Roger James Hamilton's Wealth dynamics system, I belong to
@@ -32,6 +32,14 @@ sections:
       things done. Our flow comes from simplifying complex solutions into
       predicatable systems.
 
+
+      Consecutively, I am a STEEL genius, characteristic trait of attention to
+      detail, like Warren Buffett and Henry Ford. Our natural vision is Clarity,
+      that is, 
+
+      asking the question “How?” ! Clarity is related to the detail of vision.
+      it can see in black and white, and can pick up detail that others will
+      miss.
     media:
       type: ImageBlock
       url: >-
