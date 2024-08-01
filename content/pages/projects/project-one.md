@@ -105,6 +105,8 @@ Leur taux de succès est mesuré par le nombre de visites du site web, le nombre
 
 Les caractéristiques socio-économiques de la clientèle sont captées par leur année de naissance, niveau d'éducation, statut marital, revenu familial, et le nombre d'enfants et d'adolescents à la maison. Les clients proviennent de sept pays dont l'Allemagne, l'Espagne, le Canada, l'Afrique du Sud, les USA, l'Australie et l'Inde.
 
+
+
 ### Structure des données
 
 *   Nombre de colonnes : 28
@@ -150,6 +152,8 @@ Les caractéristiques socio-économiques de la clientèle sont captées par leur
 
 Kaggle: [https://www.kaggle.com/datasets/sahilnbajaj/marketing-campaigns-data-set](https://www.kaggle.com/datasets/sahilnbajaj/marketing-campaigns-data-setAnalyse)
 
+
+
 ### Analyse des données
 
 Afin d'obtenir des informations pertinentes pour affiner notre stratégie de marketing, j'ai procédé aux requêtes suivantes :
@@ -194,6 +198,8 @@ Afin d'obtenir des informations pertinentes pour affiner notre stratégie de mar
 
 Le code SQL de ces 19 requêtes se trouve [ICI](https://github.com/FuleChi/Digital-marketing-campaign/blob/main/TP1_requetes%20Marketing_data_final.sql).
 
+
+
 ### Resultat de l'Analyse
 
 La majorité des clients proviennent d'Espagne, contribuant ainsi à 49 % des ventes totales. Les clients ayant le statut de 'Absurd' ont le revenu moyen le plus élevé. Attention : ceux-ci ne représentent que 0,1 % de la population. Il serait donc sage de prêter attention plutôt aux mariés, qui constituent 38,6 % de la clientèle.
@@ -210,9 +216,9 @@ La compagnie réalise 12 % de ses ventes en magasin de plus qu'en ligne. La vent
 
 Les Gen X constituent la majorité de la clientèle. Ils ont un âge moyen de 51 ans et préfèrent magasiner davantage en magasin.
 
-###
 
-Points Forts du Projet
+
+### Points Forts du Projet
 
 1.  **Richesse des Données** :
 
@@ -233,6 +239,8 @@ Points Forts du Projet
 4.  **Multicanal** :
 
     *   Les données incluent différents types de canaux d'achat (en ligne, en magasin, via catalogue), permettant d'analyser la performance de chaque canal et de comprendre les préférences des clients.
+
+
 
 ### Faiblesses du Projet
 
@@ -259,6 +267,8 @@ Points Forts du Projet
 **6. Analyse des données:**
 
 Cette analyse se limite aux statistiques descriptives du donnée. Une ètude plus approfondi utilisant les regressions par exemple, pourrais faire resortir la dependance entre les variables et leurs niveaux de correlation.
+
+
 
 ### Conclusion
 
