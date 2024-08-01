@@ -55,24 +55,31 @@ SET Education = UPPER(Education);
 --------------------PARTIE II. REQUÊTES DES DONNÉES--------------------------------------
 
 -- R1. Nombre total de clients par pays dans l'ordre décroissant
-SELECT Country, COUNT(*) AS NombreClients
+SELECT Country, 
+    COUNT(*) AS NombreClients,
+    ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM marketing_data), 1) AS Pourcentage
 FROM marketing_data
 GROUP BY Country
 ORDER BY NombreClients DESC;
 
 
--- R2.Quels sont les 5 status maritals ayant le revenu le plus élevé 
-SELECT TOP 5 Marital_Status, SUM(Income) AS RevenuTotal
+-- R2.Quel status maritals a le revenu moyen le plus élevé? 
+SELECT Marital_Status, COUNT(*) AS Nombre, 
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM marketing_data), 1) AS Pourcentage,
+	AVG(Income) AS RevenuMoy
 FROM marketing_data
 GROUP BY Marital_Status
-ORDER BY RevenuTotal DESC;
+ORDER BY RevenuMoy DESC;
 
 
--- R3. La liste des clients dont les revenus sont supérieurs à la moyenne des revenus de l'échantillon d'analyse
-SELECT id, Year_Birth, Education, Income FROM marketing_data 
-	WHERE Income >(
-	SELECT AVG(Income) MoyIncome
-	FROM marketing_data );
+-- R3. Le niveau d'education et le nombre des clients  dont les revenus sont supérieurs à la moyenne des revenus de l'échantillon d'analyse
+SELECT COUNT(*), Education, AVG(Income) AS MoyIncome
+FROM marketing_data 
+GROUP BY Education
+HAVING AVG(Income) > (
+    SELECT AVG(Income) 
+    FROM marketing_data
+);
  
 
 -- R4. La liste des client qui ont déjà fait au moins 1 achat sur le site web de la compagnie
@@ -81,19 +88,20 @@ SELECT id, Year_Birth, Education, Income FROM marketing_data
  WHERE NumWebPurchases > 0 ;
 
 
---R5. Relation entre le nombre d'enfants des clients et le montant des achats
+--R5. Relation entre le nombre d'enfants et adolescent àla maison et le montant des achats
 SELECT (Kidhome + Teenhome) AS NombreEnfants, COUNT(id) AS nbreClients,
-       SUM(MntWines + MntFruits + MntMeatProducts + MntFishProducts + MntSweetProducts + MntGoldProds) AS MontantTotalAchats
+       AVG(MntWines + MntFruits + MntMeatProducts + MntFishProducts + MntSweetProducts + MntGoldProds) AS MontantMoyAchats
 FROM marketing_data
 GROUP BY (Kidhome + Teenhome)
-ORDER BY MontantTotalAchats DESC;
+ORDER BY MontantMoyAchats DESC;
 
 
---R6. La liste des clients mariés qui sont client depuis au moins 10 ans, au 31 décembre 2023
-SELECT Id, Dt_Customer
+--R6. Le nombre de clients mariés et leur ancieneté de statut  de client avec la compagnie, au 31 décembre 2023
+SELECT COUNT(*) AS NbrClients, 
+       DATEDIFF(year, Dt_Customer, '2023-12-31') AS Ancienneté
 FROM marketing_data
 WHERE Marital_Status = 'Married'
-AND DATEDIFF(year, Dt_Customer, '2023-12-31') >= 10;
+GROUP BY DATEDIFF(year, Dt_Customer, '2023-12-31');
 
 
 -- R7. Le nombre de clients depuis leur derniers achats
@@ -213,15 +221,29 @@ WHERE Marital_Status = 'Single'
 GROUP BY Country, Education, (Kidhome + Teenhome);
 
 
--- R19. Les nombre de clients les plus jeunes, ainsi que leur âge et leur voie d'achat préférée
-SELECT TOP 1
+-- R19. Le nombre de clients par generation, ainsi que leur âge moyen et leur voie d'achat préférée
+SELECT 
     COUNT(id) AS nbreClients, 
-    YEAR(GETDATE()) - Year_Birth AS Age, 
+    AVG(YEAR(GETDATE()) - Year_Birth) AS Age, 
     SUM(NumCatalogPurchases) AS nbreCatalog, 
     SUM(NumDealsPurchases) AS nbreDeals, 
     SUM(NumStorePurchases) AS nbreMagasin, 
-    SUM(NumWebPurchases) AS nbreInternet
+    SUM(NumWebPurchases) AS nbreInternet,
+    CASE 
+        WHEN YEAR(GETDATE()) - Year_Birth <= 27 THEN 'Gen Z'          -- Born 1997 and later
+        WHEN YEAR(GETDATE()) - Year_Birth BETWEEN 28 AND 43 THEN 'Millennials' -- Born 1981 to 1996
+        WHEN YEAR(GETDATE()) - Year_Birth BETWEEN 44 AND 59 THEN 'Gen X'      -- Born 1965 to 1980
+        WHEN YEAR(GETDATE()) - Year_Birth BETWEEN 60 AND 69 THEN 'Boomers II' -- Born 1955 to 1964
+        ELSE 'Boomers I'                                                      -- Born 1946 to 1954
+    END AS Generation
 FROM marketing_data
-GROUP BY YEAR(GETDATE()) - Year_Birth
+GROUP BY 
+    CASE 
+        WHEN YEAR(GETDATE()) - Year_Birth <= 27 THEN 'Gen Z'
+        WHEN YEAR(GETDATE()) - Year_Birth BETWEEN 28 AND 43 THEN 'Millennials'
+        WHEN YEAR(GETDATE()) - Year_Birth BETWEEN 44 AND 59 THEN 'Gen X'
+        WHEN YEAR(GETDATE()) - Year_Birth BETWEEN 60 AND 69 THEN 'Boomers II'
+        ELSE 'Boomers I'
+    END 
 ORDER BY Age ASC;
 
