@@ -11,7 +11,7 @@ featuredImage:
   altText: Project thumbnail image
 media:
   type: ImageBlock
-  url: /images/bg3.jpg
+  url: /images/Purple Gradient Marketing Analytics Carousel Instagram Post (2).png
   altText: Project image
 ---
 
