@@ -1,6 +1,6 @@
 ---
 type: ProjectLayout
-title: MAKING SENSE OF TWEETS USING MONGODB - POLICY MAKER'S GUIDE
+title: MAKING SENSE OF TWEETS USING MONGODB - A POLICY MAKER'S GUIDE
 colors: colors-a
 date: '2022-09-11'
 client: Awesome client
