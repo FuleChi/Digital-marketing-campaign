@@ -101,6 +101,7 @@ metaTags:
     property: 'og:title'
     content: ''
 socialImage: /images/sql-icon-27.jpg
+addTitleSuffix: true
 ---
 ### Description
 
