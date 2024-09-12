@@ -20,7 +20,8 @@ media:
     https://res.cloudinary.com/fulechib/image/upload/v1726156265/Purple_Gradient_Marketing_Analytics_Carousel_Instagram_Post_2_qzdndu.png
   altText: altText of the image
   caption: Caption of the image
-  elementId: ''
+  elementId: >-
+    https://res.cloudinary.com/fulechib/image/upload/v1726156265/Purple_Gradient_Marketing_Analytics_Carousel_Instagram_Post_2_qzdndu.png
 ---
 ### Introduction
 
