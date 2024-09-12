@@ -7,6 +7,12 @@ client: ''
 description: 'This Project was realised with my team mates, Ghislain FEPESSI AND EVELINE SOH'
 addTitleSuffix: false
 socialImage: /images/mongodb-logo-png.png
+featuredImage:
+  type: ImageBlock
+  url: 'https://assets.stackbit.com/components/images/default/default-image.png'
+  altText: altText of the image
+  caption: Caption of the image
+  elementId: ''
 ---
 ### Introduction
 
