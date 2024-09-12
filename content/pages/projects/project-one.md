@@ -94,6 +94,7 @@ bottomSections:
         textAlign: center
       text:
         textAlign: center
+metaTitle: SQL
 ---
 ### Description
 
