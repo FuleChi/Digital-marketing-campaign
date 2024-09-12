@@ -14,6 +14,12 @@ featuredImage:
   altText: altText of the image
   caption: Caption of the image
   elementId: ''
+media:
+  type: ImageBlock
+  url: 'https://assets.stackbit.com/components/images/default/default-image.png'
+  altText: altText of the image
+  caption: Caption of the image
+  elementId: ''
 ---
 ### Introduction
 
