@@ -10,7 +10,7 @@ media:
   url: /images/Purple Gradient Marketing Analytics Carousel Instagram Post (2).png
   altText: Project image
 addTitleSuffix: false
-socialImage: /images/Purple Gradient Marketing Analytics Carousel Instagram Post (2).png
+socialImage: /images/mongodb-logo-png.png
 featuredImage:
   type: ImageBlock
   url: /images/Purple Gradient Marketing Analytics Carousel Instagram Post (2).png
