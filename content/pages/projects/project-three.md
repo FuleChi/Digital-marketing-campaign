@@ -13,6 +13,7 @@ media:
   type: ImageBlock
   url: /images/Purple Gradient Marketing Analytics Carousel Instagram Post (2).png
   altText: Project image
+addTitleSuffix: false
 ---
 ### Introduction
 
