@@ -11,6 +11,12 @@ media:
   altText: Project image
 addTitleSuffix: false
 socialImage: /images/Purple Gradient Marketing Analytics Carousel Instagram Post (2).png
+featuredImage:
+  type: ImageBlock
+  url: 'https://assets.stackbit.com/components/images/default/default-image.png'
+  altText: altText of the image
+  caption: Caption of the image
+  elementId: ''
 ---
 ### Introduction
 
