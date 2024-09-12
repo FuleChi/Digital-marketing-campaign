@@ -100,6 +100,7 @@ metaTags:
   - type: MetaTag
     property: 'og:title'
     content: ''
+socialImage: /images/1499955337microsoft-sql-server-logo-png (1).png
 ---
 ### Description
 
