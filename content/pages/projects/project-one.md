@@ -94,6 +94,14 @@ bottomSections:
         textAlign: center
       text:
         textAlign: center
+metaTitle: SQL
+metaDescription: Azure Data Studio
+metaTags:
+  - type: MetaTag
+    property: 'og:title'
+    content: ''
+socialImage: /images/sql-icon-27.jpg
+addTitleSuffix: true
 ---
 ### Description
 
