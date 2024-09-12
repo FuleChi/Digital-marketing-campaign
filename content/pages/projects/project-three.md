@@ -14,6 +14,7 @@ media:
   url: /images/Purple Gradient Marketing Analytics Carousel Instagram Post (2).png
   altText: Project image
 addTitleSuffix: false
+socialImage: /images/Purple Gradient Marketing Analytics Carousel Instagram Post (2).png
 ---
 ### Introduction
 
