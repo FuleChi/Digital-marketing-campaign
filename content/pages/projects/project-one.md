@@ -96,6 +96,10 @@ bottomSections:
         textAlign: center
 metaTitle: SQL
 metaDescription: Azure Data Studio
+metaTags:
+  - type: MetaTag
+    property: 'og:title'
+    content: ''
 ---
 ### Description
 
