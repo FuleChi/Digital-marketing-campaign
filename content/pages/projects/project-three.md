@@ -7,7 +7,8 @@ client: ''
 description: 'This Project was realised with my team mates, Ghislain FEPESSI AND EVELINE SOH'
 media:
   type: ImageBlock
-  url: /images/Purple Gradient Marketing Analytics Carousel Instagram Post (2).png
+  url: >-
+    http://res.cloudinary.com/fulechib/image/upload/v1726156265/Purple_Gradient_Marketing_Analytics_Carousel_Instagram_Post_2_qzdndu.png
   altText: Project image
 addTitleSuffix: false
 socialImage: /images/mongodb-logo-png.png
