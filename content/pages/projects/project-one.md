@@ -95,6 +95,7 @@ bottomSections:
       text:
         textAlign: center
 metaTitle: SQL
+metaDescription: Azure Data Studio
 ---
 ### Description
 
