@@ -173,7 +173,7 @@ sections:
         actions:
           - type: Link
             label: DataCamp Portfolio
-            url: 'https://codepen.io/'
+            url: 'https://www.datacamp.com/portfolio/coachfule'
         styles:
           self:
             textAlign: left
