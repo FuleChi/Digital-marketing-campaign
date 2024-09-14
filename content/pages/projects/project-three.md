@@ -112,7 +112,8 @@ db.protests.aggregate(\[    {      $group: {        \_id: "$user.userna
 
 db.protests.aggregate(\[    { $match: { "content": { $regex: "#FarmersProtest", $options: "i" } } },    { $unwind: "$content" },    { $group: { \_id: "$content", count: { $sum: 1 } } },    { $sort: { count: -1 } },    { $limit: 10 }  ])
 
-**Output**: **#**ReleaseActivists **#**ReleaseFarmers **#**IStandWithFarmers **#**FarmersProtest **#**ReleaseFrStanSwamyNow **#**HathrasHorrorShocksIndia **#**DelhiRiots2020 **#**ReleaseActivists **#**ReleaseFrStanSwamyNow **#**ModiAgainstFarmers
+**Output**: \*\*#\*\*ReleaseActivists \*\*#\*\*ReleaseFarmers \*\*#\*\*IStandWithFarmers \*\*#\*\*FarmersProtest \*\*#\*\*ReleaseFrStanSwamyNow \*\*#\*\*HathrasHorrorShocksIndia \*\*#\*\*DelhiRiots2020 \*\*#\*\*ReleaseActivists \*\*#\*\*ReleaseFrStanSwamyNow \*\*#\*\*ModiAgainstFarmers **#**300DeathsAtProtest
+
 
 
 Recommendations
