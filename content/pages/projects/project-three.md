@@ -38,6 +38,8 @@ Without a clue about who's opinion is actually fuelling the uproar, it is diffic
 
 Fortunately, with the right analysis of the data collected from Twitter (X) , it is possible to initiate dialogue with the right audience.
 
+
+
 ### About the Data
 
 The data presents a 2020–2021 Indian farmers' protest by Farmer unions and their representatives, who  have demanded that the laws be repealed and have stated that they will not accept a compromise.
@@ -86,6 +88,8 @@ Table showing the variables and their corresponding data types:
 
 The location information in the data was used to create a new collection named "geoLocation" that grouped cities into countries and countries into continents.
 
+
+
 ### Key Findings
 
 1.  **Number of protesters in our database**
@@ -124,20 +128,49 @@ db.protests.aggregate(\[    {      $lookup: {        from: "geoLocation
 
 db.protests.aggregate(\[  {        $lookup: {      from: "geoLocation",      localField: "user.location",      foreignField: "cities\_countries.City",      as: "location\_info"    }  },  {       $unwind: "$location\_info"  },  {        $group: {      \_id: "$location\_info.continent",              numRetweets: { $sum: "$retweetCount" },       numberIDs: { $sum: 1 }                      }  },  {        $sort: { numRetweets: -1 }  }])
 
-**Output in (numRetweets, numIDs) pairs**: Unknown (336520, 65416), Asia: (322126, 19174), North America (43847, 10177), Oceania (11659, 1209) and Europe (6503, 1860)
+**Output in (numRetweets, numIDs) pairs**: Unknown (336520, 65416), Asia: (322126, 19174), North America (43847, 10177), Oceania (11659, 1209) and Europe (6503, 1860).
 
 
 
-Observations and Recommendations
+### Observations and Recommendations
 
-Although the farmer's Act that was passed in India was expected to affect only the Indian farmers, many other people around the world took interest in the situation, with Canada  being the second biggest country leading the protest online after India. 
+Although the farmer's Act that was passed in India was expected to affect only the Indian farmers, many other people around the world took interest in the situation, with Canada  being the second biggest country leading the protest online after India.
 
 Even though large media houses such as ndTV, ZeeNewsEnglish and timesofindia, just to name a few, actively participated in propagating the news around the farmer's protest in India, their opinions were not as appreciated by the public like those of individual protesters like harjot\_tweeting and tasveersandhu.
 
 Although the hashtag #FarmersProtest was the main hashtag used in the study, protesters used other hashtags like #ReleaseActivists and #ReleaseFarmers. The hashtags in themselves reveal more information about the ongoing protest, notably, that protesters were being arrested.
 
-Therefore 
+
+Based on the analyses above, here are a few recommendations to policy makers:
+
+*   putting the scope of them protest in perspective is a smart move, as the opinion of activists around the world has a great influence on the farmers and the protesters in India.
+
+*   identifying the influencers and initiating dialogue with them will help save time and effort, since they can relate with other farmers more.
+
+*   understnading the ramifications of the protest by following associated hashtags should facilitate target topics of discussion by the policy makers.
+
+### 
+Limitations of the Project
+
+The project faced several limitations, including data quality issues such as null or empty values in fields like media, outlinks, quotedTweet, and mentionedUsers. 
+
+Case sensitivity in textual data and the complexity of fields like content and renderedContent required additional processing. Inconsistencies in city names led to 65,571 "unknown" locations, limiting geographical insights.
+
+Many user accounts were anonymous or lacked sufficient metadata, affecting influencer identification.
+
+The dataset covered a limited time period (February 2021), restricting long-term trend analysis. Biases inherent in social media data may have skewed results toward more vocal groups, excluding underrepresented voices like farmers who are less active online. Additionally, while hashtags were analyzed, conversations outside those specific hashtags may have been missed. These limitations impact the overall accuracy and depth of the analysis.
+
+To address these limitations, future work should improve data cleaning, standardize text and location fields, expand the dataset's timeframe, and incorporate other data sources to reduce bias. Additionally, enhancing language processing and employing advanced methods to identify hidden influencers and conversations would yield more accurate insights.
+
+### 
+Conclusion
+
+In conclusion, this project highlights the power of social media in shaping and amplifying public opinion, particularly in complex socio-political issues like the Indian farmers' protest. The data reveals that the protest extended far beyond India's borders, influencing activists and citizens globally. By
+analyzing key influencers, hashtags, and geographical trends, policy makers can gain valuable insights into the scope and nature of the movement. Leveraging such data-driven approaches allows for more effective, targeted communication and engagement, ensuring that dialogue is initiated with the right voices and concerns are addressed efficiently. This approach not only enhances decision-making but also fosters a more inclusive and informed policy-making process.
 
 
 
-propagated the 
+
+
+
+
