@@ -112,7 +112,17 @@ db.protests.aggregate(\[    {      $group: {        \_id: "$user.userna
 
 db.protests.aggregate(\[    { $match: { "content": { $regex: "#FarmersProtest", $options: "i" } } },    { $unwind: "$content" },    { $group: { \_id: "$content", count: { $sum: 1 } } },    { $sort: { count: -1 } },    { $limit: 10 }  ])
 
-**Output**: \*\*#\*\*ReleaseActivists \*\*#\*\*ReleaseFarmers \*\*#\*\*IStandWithFarmers \*\*#\*\*FarmersProtest \*\*#\*\*ReleaseFrStanSwamyNow \*\*#\*\*HathrasHorrorShocksIndia \*\*#\*\*DelhiRiots2020 \*\*#\*\*ReleaseActivists \*\*#\*\*ReleaseFrStanSwamyNow \*\*#\*\*ModiAgainstFarmers **#**300DeathsAtProtest
+**Output**: #ReleaseActivists #ReleaseFarmers #IStandWithFarmers #FarmersProtest #ReleaseFrStanSwamyNow #HathrasHorrorShocksIndia #DelhiRiots2020 #ReleaseActivists #ReleaseFrStanSwamyNow #ModiAgainstFarmers #300DeathsAtProtest
+
+
+
+5\. Number of Tweets per Country with the hashtag #FarmersProtest
+
+```
+db.protests.aggregate([    {            $lookup: {        from: "geoLocation",                localField: "user.location",            foreignField: "cities_countries.City",         as: "geo_data"                       }    },    {            $unwind: "$geo_data"    },    {            $group: {        _id: "$geo_data.cities_countries.Country",          tweet_count: { $sum: 1 }                          }    },    {           $sort: { tweet_count: -1 }    }  ])
+```
+
+**Output**: Unknown: 65,416, India: 19174, Canada: 10,177, United Kingdom: 1,860 and Australia: 1209
 
 
 
