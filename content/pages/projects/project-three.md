@@ -114,16 +114,18 @@ db.protests.aggregate(\[    { $match: { "content": { $regex: "#FarmersProtest"
 
 **Output**: #ReleaseActivists #ReleaseFarmers #IStandWithFarmers #FarmersProtest #ReleaseFrStanSwamyNow #HathrasHorrorShocksIndia #DelhiRiots2020 #ReleaseActivists #ReleaseFrStanSwamyNow #ModiAgainstFarmers #300DeathsAtProtest
 
+**5. Top 5 Countries with the highest number of tweets** 
+
+db.protests.aggregate(\[    {      $lookup: {        from: "geoLocation",        let: { userLocation: { $toLower: "$user.location" } },        pipeline: \[          {            $unwind: "$cities\_countries"          },          {            $match: {              $expr: {                $eq: \[{ $toLower: "$cities\_countries.City" }, "$$userLocation"]              }            }          }        ],        as: "location\_data"      }    },    {      $unwind: "$location\_data"    },    {      $group: {        \_id: "$location\_data.cities\_countries.Country",        tweetCount: { $sum: 1 }      }    },    {      $sort: { tweetCount: -1 }    }  ])
+
+**Output**: Unknown: 65571, India: 25915, Canada: 10,185, United Kingdom: 1747 and Australia: 1209
 
 
-5\. Number of Tweets per Country with the hashtag #FarmersProtest
 
-```
-db.protests.aggregate([    {            $lookup: {        from: "geoLocation",                localField: "user.location",            foreignField: "cities_countries.City",         as: "geo_data"                       }    },    {            $unwind: "$geo_data"    },    {            $group: {        _id: "$geo_data.cities_countries.Country",          tweet_count: { $sum: 1 }                          }    },    {           $sort: { tweet_count: -1 }    }  ])
-```
+**6. Number of retweets according to continent and the corresponding number of protesters involved**
 
-**Output**: Unknown: 65,416, India: 19174, Canada: 10,177, United Kingdom: 1,860 and Australia: 1209
+db.protests.aggregate(\[  {        $lookup: {      from: "geoLocation",      localField: "user.location",      foreignField: "cities\_countries.City",      as: "location\_info"    }  },  {       $unwind: "$location\_info"  },  {        $group: {      \_id: "$location\_info.continent",              numRetweets: { $sum: "$retweetCount" },       numberIDs: { $sum: 1 }                      }  },  {        $sort: { numRetweets: -1 }  }])
 
-
+**Output in (numRetweets, numIDs) pairs**: Unknown (336520, 65416), Asia: (322126, 19174), North America (43847, 10177), Oceania (11659, 1209) and Europe (6503, 1860)
 
 Recommendations
