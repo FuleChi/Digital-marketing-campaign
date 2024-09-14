@@ -38,8 +38,6 @@ Without a clue about who's opinion is actually fuelling the uproar, it is diffic
 
 Fortunately, with the right analysis of the data collected from Twitter (X) , it is possible to initiate dialogue with the right audience.
 
-
-
 ### About the Data
 
 The data presents a 2020–2021 Indian farmers' protest by Farmer unions and their representatives, who  have demanded that the laws be repealed and have stated that they will not accept a compromise.
@@ -52,17 +50,13 @@ The dataset consists of a JSON collection containing 139,999 documents about the
 
 You may access the raw dataset here: [source](https://www.kaggle.com/datasets/prathamsharma123/farmers-protest-tweets-dataset-raw-json).
 
-
-
 ### Procedure
 
-The dataset was uploaded into MongoDB Compass (a collection called protests.json was created) and was interesting queries were written via VS Code. 
+The dataset was uploaded into MongoDB Compass (a collection called protests.json was created) and was interesting queries were written via VS Code.
 
 The "protests" collection is made up of 139,999 documents, 22 variables and several sub fields.
 
-
 Table showing the variables and their corresponding data types:
-
 
 | No. | Name of column  | Data Type         |
 | --- | --------------- | ----------------- |
@@ -92,13 +86,41 @@ Table showing the variables and their corresponding data types:
 
 The location information in the data was used to create a new collection named "geoLocation" that grouped cities into countries and countries into continents.
 
-
-
 Key Findings
 
-1.  The top 10 users who have tweeted the most using the hashtag #FarmersProtest
+1.  **The top 10 protesters who have the most retweets using the hashtag #FarmersProtest**
 
 db.protests.aggregate(\[    { $match: { "content": { $regex: "#FarmersProtest", $options: "i" } } },    { $group: { \_id: "$user.username", tweet\_count: { $sum: 1 } } },    { $sort: { tweet\_count: -1 } },    { $limit: 10 }  ])
+
+Output: 
+
+
+
+**2. The top 10 protesters with the highest number of followers on Twitter**
+
+db.protests.aggregate(\[    {      $group: {        \_id: "$user.username",          totalFollowers: { $sum: "$user.followersCount" },         avgFollowers: { $avg: "$user.followersCount" }      }, { $sort: { retweetCount: -1 } },    }  ])
+
+**Output**: ndtv, htTweets, IndiaToday, ZeeNewsEnglish, timesofindia, ABPNews, EconomicTimes, dna, bsindia and the\_hindu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
