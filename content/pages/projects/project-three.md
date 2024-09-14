@@ -108,12 +108,11 @@ db.protests.aggregate(\[    {      $group: {        \_id: "$user.userna
 
 **Output**: ndtv, htTweets, IndiaToday, ZeeNewsEnglish, timesofindia, ABPNews, EconomicTimes, dna, bsindia and the\_hindu
 
-
-
 **4. Top Hashtags Used Alongside #FarmersProtest**
 
 db.protests.aggregate(\[    { $match: { "content": { $regex: "#FarmersProtest", $options: "i" } } },    { $unwind: "$content" },    { $group: { \_id: "$content", count: { $sum: 1 } } },    { $sort: { count: -1 } },    { $limit: 10 }  ])
 
-Output: 
+**Output**: **#**ReleaseActivists **#**ReleaseFarmers **#**IStandWithFarmers **#**FarmersProtest **#**ReleaseFrStanSwamyNow **#**HathrasHorrorShocksIndia **#**DelhiRiots2020 **#**ReleaseActivists **#**ReleaseFrStanSwamyNow **#**ModiAgainstFarmers
+
 
 Recommendations
