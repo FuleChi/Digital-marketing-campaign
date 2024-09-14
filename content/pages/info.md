@@ -149,7 +149,7 @@ sections:
         actions:
           - type: Link
             label: GitHub
-            url: 'https://github.com/'
+            url: 'https://github.com/FuleChi'
         styles:
           self:
             textAlign: left
@@ -157,7 +157,7 @@ sections:
         actions:
           - type: Link
             label: Twitter
-            url: 'https://twitter.com/'
+            url: 'https://twitter.com/coach_fule'
         styles:
           self:
             textAlign: left
@@ -165,15 +165,15 @@ sections:
         actions:
           - type: Link
             label: LinkedIn
-            url: 'https://www.linkedin.com/'
+            url: 'https://www.linkedin.com/in/coachfule'
         styles:
           self:
             textAlign: left
       - type: FeaturedItem
         actions:
           - type: Link
-            label: CodePen
-            url: 'https://codepen.io/'
+            label: My Portfolio on DataCamp
+            url: 'https://www.datacamp.com/portfolio/coachfule'
         styles:
           self:
             textAlign: left
@@ -189,7 +189,7 @@ sections:
         actions:
           - type: Link
             label: Instagram
-            url: 'https://www.instagram.com/'
+            url: 'https://www.instagram.com/coach.fule/'
         styles:
           self:
             textAlign: left
