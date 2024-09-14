@@ -28,17 +28,19 @@ sections:
       According to Roger James Hamilton's Wealth dynamics system, I belong to
       the MECHANIC wealth profile. Like Mark Zuckerberg and Jeff Bezos, 
       Mechanics are the best at completing things. We are high on Steel and
-      Dynamo energy. As perfectionists we sometimes seem to take longer to get
-      things done. Our flow comes from simplifying complex solutions into
-      predicatable systems.
+      Dynamo energy.
+
+
+      As perfectionists we sometimes seem to take longer to get things done. Our
+      flow comes from simplifying complex solutions into predictable systems.
 
 
       Consecutively, I am a STEEL genius, characteristic trait of attention to
       detail, like Warren Buffett and Henry Ford. Our natural vision is Clarity,
-      that is, 
+      that is,
 
       asking the question “How?” ! Clarity is related to the detail of vision.
-      it can see in black and white, and can pick up detail that others will
+      It can see in black and white, and can pick up detail that others will
       miss.
     media:
       type: ImageBlock
