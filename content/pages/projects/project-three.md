@@ -94,14 +94,13 @@ db.protests.aggregate(\[  {    $group: {      \_id: "$user.username"    
 
 **Output**: 21,318
 
-
 **2. The top 10 protesters who have the most retweets using the hashtag #FarmersProtest**
 
 db.protests.aggregate(\[    { $match: { "content": { $regex: "#FarmersProtest", $options: "i" } } },    { $group: { \_id: "$user.username", tweet\_count: { $sum: 1 } } },    { $sort: { tweet\_count: -1 } },    { $limit: 10 }  ])
 
 **Output**: harjot\_tweeting, tasveersandhu, rumsomal, rebelpacifist, shells\_n\_petals, jot\_\_b, with\_kaur, Jass\_k\_G, Iamjazzie96, and DigitalKisanBot
 
-****
+***
 
 **3. The top 10 protesters with the highest number of followers on Twitter**
 
@@ -109,6 +108,12 @@ db.protests.aggregate(\[    {      $group: {        \_id: "$user.userna
 
 **Output**: ndtv, htTweets, IndiaToday, ZeeNewsEnglish, timesofindia, ABPNews, EconomicTimes, dna, bsindia and the\_hindu
 
-3\. 
+
+
+**4. Top Hashtags Used Alongside #FarmersProtest**
+
+db.protests.aggregate(\[    { $match: { "content": { $regex: "#FarmersProtest", $options: "i" } } },    { $unwind: "$content" },    { $group: { \_id: "$content", count: { $sum: 1 } } },    { $sort: { count: -1 } },    { $limit: 10 }  ])
+
+Output: 
 
 Recommendations
