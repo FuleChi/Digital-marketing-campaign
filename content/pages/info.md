@@ -172,7 +172,7 @@ sections:
       - type: FeaturedItem
         actions:
           - type: Link
-            label: CodePen
+            label: DataCamp Portfolio
             url: 'https://codepen.io/'
         styles:
           self:
