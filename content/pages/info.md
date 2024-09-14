@@ -172,7 +172,7 @@ sections:
       - type: FeaturedItem
         actions:
           - type: Link
-            label: DataCamp Portfolio
+            label: My Portfolio on DataCamp
             url: 'https://www.datacamp.com/portfolio/coachfule'
         styles:
           self:
