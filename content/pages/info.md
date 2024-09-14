@@ -165,7 +165,7 @@ sections:
         actions:
           - type: Link
             label: LinkedIn
-            url: 'https://www.linkedin.com/in/coachfu;e'
+            url: 'https://www.linkedin.com/in/coachfule'
         styles:
           self:
             textAlign: left
