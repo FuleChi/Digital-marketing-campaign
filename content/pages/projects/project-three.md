@@ -86,7 +86,9 @@ Table showing the variables and their corresponding data types:
 
 The location information in the data was used to create a new collection named "geoLocation" that grouped cities into countries and countries into continents.
 
-Key Findings
+
+
+### Key Findings
 
 1.  **The top 10 protesters who have the most retweets using the hashtag #FarmersProtest**
 
@@ -94,12 +96,12 @@ db.protests.aggregate(\[    { $match: { "content": { $regex: "#FarmersProtest"
 
 **Output**: harjot\_tweeting, tasveersandhu, rumsomal, rebelpacifist, shells\_n\_petals, jot\_\_b, with\_kaur, Jass\_k\_G, Iamjazzie96, and DigitalKisanBot
 
-
-
 **2. The top 10 protesters with the highest number of followers on Twitter**
 
 db.protests.aggregate(\[    {      $group: {        \_id: "$user.username",          totalFollowers: { $sum: "$user.followersCount" },         avgFollowers: { $avg: "$user.followersCount" }      }, { $sort: { retweetCount: -1 } },    }  ])
 
 **Output**: ndtv, htTweets, IndiaToday, ZeeNewsEnglish, timesofindia, ABPNews, EconomicTimes, dna, bsindia and the\_hindu
+
+3\. 
 
 Recommendations
