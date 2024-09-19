@@ -2,7 +2,7 @@
 type: ProjectLayout
 title: Data Visualization using Microsoft Power BI
 colors: colors-a
-date: '2024-09-20'
+date: '2024-09-19'
 client: Awesome client
 description: >-
   Story telling using visualizations based on data on COVID19, Games, Sales and
