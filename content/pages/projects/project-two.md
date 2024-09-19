@@ -5,7 +5,7 @@ colors: colors-a
 date: '2021-12-20'
 client: Awesome client
 description: >-
-  Story telling using visualization based on data on COVID19, Games, Sales and
+  Story telling using visualizations based on data on COVID19, Games, Sales and
   Financials
 featuredImage:
   type: ImageBlock
