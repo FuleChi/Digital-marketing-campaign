@@ -1,6 +1,6 @@
 ---
 type: ProjectLayout
-title: Data Visualization using Power BI
+title: Data Visualization using Microsoft Power BI
 colors: colors-a
 date: '2021-12-20'
 client: Awesome client
