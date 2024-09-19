@@ -14,7 +14,8 @@ featuredImage:
   altText: Project thumbnail image
 media:
   type: ImageBlock
-  url: /images/bg2.jpg
+  url: >-
+    http://res.cloudinary.com/fulechib/image/upload/v1726713333/Purple_Gradient_Marketing_Analytics_Carousel_Instagram_Post_3_q7ar8q.png
   altText: Project image
 ---
 ### PROJECT 1. Defining Marketing Strategy based on COVID19 Data - Power BI
