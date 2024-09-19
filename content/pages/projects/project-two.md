@@ -2,18 +2,20 @@
 type: ProjectLayout
 title: Data Visualization using Microsoft Power BI
 colors: colors-a
-date: '2021-12-20'
+date: '2024-09-19'
 client: Awesome client
 description: >-
   Story telling using visualizations based on data on COVID19, Games, Sales and
   Financials
 featuredImage:
   type: ImageBlock
-  url: /images/bg2.jpg
+  url: >-
+    http://res.cloudinary.com/fulechib/image/upload/v1726713333/Purple_Gradient_Marketing_Analytics_Carousel_Instagram_Post_3_q7ar8q.png
   altText: Project thumbnail image
 media:
   type: ImageBlock
-  url: /images/bg2.jpg
+  url: >-
+    http://res.cloudinary.com/fulechib/image/upload/v1726713333/Purple_Gradient_Marketing_Analytics_Carousel_Instagram_Post_3_q7ar8q.png
   altText: Project image
 ---
 ### PROJECT 1. Defining Marketing Strategy based on COVID19 Data - Power BI
