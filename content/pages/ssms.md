@@ -6,7 +6,7 @@ sections:
     colors: colors-f
     variant: variant-a
     title: CONSTRUCTION OF A DATAMART FOR ANALYSIS IN MICROSOFT SSMS
-    subtitle: The section subtitle
+    subtitle: Data Infrastructure for Data Analysis
     text: >-
       Start adding sections by clicking the + button on the page or through the
       sidebar.
