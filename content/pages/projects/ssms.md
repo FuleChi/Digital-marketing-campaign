@@ -1,0 +1,30 @@
+---
+type: ProjectLayout
+title: Construction of a Datamart for Analysis
+date: '2025-01-22'
+client: Awesome client
+description: >-
+  Nunc rutrum felis dui, ut consequat sapien scelerisque vel. Integer
+  condimentum dignissim justo vel faucibus.
+featuredImage:
+  type: ImageBlock
+  url: /images/Purple Gradient Marketing Analytics Carousel Instagram Post.png
+  altText: Project thumbnail image
+  caption: ''
+  elementId: ''
+media:
+  type: ImageBlock
+  url: /images/Purple Gradient Marketing Analytics Carousel Instagram Post.png
+  altText: Project image
+  caption: Caption of the image
+  elementId: ''
+addTitleSuffix: true
+colors: colors-a
+backgroundImage:
+  type: BackgroundImage
+  url: /images/bg2.jpg
+  backgroundSize: cover
+  backgroundPosition: center
+  backgroundRepeat: no-repeat
+  opacity: 100
+---
