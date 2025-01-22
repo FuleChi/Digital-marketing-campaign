@@ -32,7 +32,9 @@ sections:
     subtitle: This is the subtitle
     images:
       - type: ImageBlock
-        url: /images/gallery-1.jpg
+        url: >-
+          /images/Purple Gradient Marketing Analytics Carousel Instagram
+          Post.png
         altText: Image one
         caption: Image one caption
         elementId: ''
